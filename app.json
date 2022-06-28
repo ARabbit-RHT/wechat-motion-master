@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/record/detail/more2/more",
+    "pages/register/register",
+    "pages/forget/forget_password",
+    "pages/forget/next/next",
+    "pages/sports/sports",
+    "pages/sports/do/do",
+    "pages/record/record",
+    "pages/record/detail/detail",
+    "pages/record/detail/more/more",
+   
+    "pages/user/user"
+  ],
+  
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "姿态识别",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor":"#000",
+    "list": [  
+      {
+        "iconPath": "icon/lightning1.png",
+        "selectedIconPath": "icon/lightning.png",
+        "pagePath": "pages/sports/sports",
+        "text": "运动"
+      },
+      {
+        "iconPath": "icon/project1.png",
+        "selectedIconPath": "icon/project.png",
+        "pagePath": "pages/record/record",
+        "text": "记录"
+      },
+      {
+        "iconPath": "icon/me1.png",
+        "selectedIconPath": "icon/me.png",
+        "pagePath": "pages/user/user",
+        "text": "我"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

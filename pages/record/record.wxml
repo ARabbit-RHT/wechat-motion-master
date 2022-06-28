@@ -1,0 +1,16 @@
+<!--pages/project/project.wxml-->
+<view>
+  <image class="load-failure-image" mode="aspectFill" src="{{imgsrc}}" hidden="{{hidden}}" bindtap="clickRetry"/>
+  
+  <view class="card" wx:for="{{items}}" wx:key="unique" data-item="{{item}}" bindtap="onItemClick">
+    <view data-publish-time="{{item.time}}" >
+      <image class="image" mode="aspectFill" src="{{item.motion.image_url}}" />
+      <text class="time">{{item.create_time}}</text>
+      <view class="title">{{item.motion.name}}</view>
+      <view class="title" wx:if="{{item.status == 2}}">识别完成</view>
+      <view  class="title"  wx:elif="{{item.status == 1}}">识别中</view>
+      <view  class="title"  wx:elif="{{item.status == 0}}">未开始</view>
+      <view  class="title"  wx:elif="{{item.status == -1}}">识别失败</view>
+    </view>
+  </view>
+</view>

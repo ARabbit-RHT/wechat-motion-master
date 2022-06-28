@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#efefef",
+  "navigationBarTitleText": "动态识别详细",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "ch-canvas": "../../../../components/ch-canvas/ch-canvas",
+    "select": "../../../../components/select/select"
+  }
+}

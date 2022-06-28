@@ -1,0 +1,30 @@
+<!--pages/register/register.wxml-->
+<view class="content">
+  <form bindsubmit="confirm">
+    <view class="account">
+      <image class="nameImage" src="../../../icon/username.png"></image>
+      <view class="title">验证码</view>
+      <view class="num"><input  placeholder="验证码" placeholder-style="color:#999999;" name="code"/></view>
+    </view>
+
+    <view class="hr"></view>
+    <view class="account">
+      <image class="keyImage" src="../../../icon/password.png"></image>
+      <view class="title">密码</view>
+      <view class="num"><input  placeholder="请输入密码" password placeholder-style="color:#999999;" name="password1"/></view>
+      
+    </view>
+    
+    <view class="hr"></view>
+    <view class="account">
+      <image class="keyImage" src="../../../icon/password.png"></image>
+      <view class="title">密码</view>
+      <view class="num"><input  placeholder="请输入确认密码" password placeholder-style="color:#999999;" name="password2"/></view>
+      
+    </view>
+    
+    <view class="hr"></view>
+    
+    <button class="btn" form-type='submit' type="primary">确认</button>
+  </form>
+</view>

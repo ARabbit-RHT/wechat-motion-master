@@ -1,0 +1,45 @@
+<form>
+  <view class="block">
+      <label>动作名称：{{name}}</label>
+      <label>动作分类：{{category}}</label>
+    <label>动作记录</label>
+            <view class="video">
+                <video class="videoContent" show-center-play-btn="true" autoplay="false"
+                 src="{{videoUrl}}" object-fit="fill" bindfullscreenchange="fullscreenchange"></video>
+            </view>
+  </view>
+  <view class="block  ">
+  <label>动作变化</label>
+  <view class="u-label">
+        用户变化程度 time: <text>{{line2Time1}}</text> 
+        sy: <text>{{line2Sy1}}</text>
+    </view>
+    <view class='container'>
+      <canvas
+      class="u-canvas"
+      canvas-id="chartline"
+      bindtouchstart="chartTouchstart"
+	    bindtouchmove="chartTouchmove"
+    ></canvas> 
+      </view>
+    
+<!-- 出库类型下拉框 -->
+<label>肢体夹角选择</label>
+<select prop-array='{{select_options}}'  bind:select='select' />
+
+
+  </view>
+  <view class="block">
+    <label>评价信息</label>
+    <view wx:if="{{cf==false}}">
+      <label>个数：<text style="color:blue">{{num}}</text></label></view>
+      <view wx:elif="{{cf==true}}">
+      <label>相似值（越大说明越无关）：<text style="color:blue">{{num}}</text></label></view>
+      <label>错误提醒<text style="color:green">*</text></label>
+      <textarea disabled="true" value="{{error}}"></textarea>
+      <label>建议<text style="color:green">*</text></label>
+      <textarea disabled="true" value="{{advice}}"></textarea>
+  </view>
+  <button id="back" catchtap='back'>返回</button>
+</form>
+

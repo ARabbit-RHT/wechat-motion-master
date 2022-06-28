@@ -1,0 +1,26 @@
+<form>
+  <view class="block">
+      <label>动作名称：{{name}}</label>
+      <label>动作分类：{{category}}</label>
+    <label>动作描述</label>
+    <textarea disabled="true" value="{{explains}}"></textarea>
+    <label>标准动作视频</label>
+    <view class="video">
+                <video class="videoContent" show-center-play-btn="true" autoplay="false"
+                 src="{{videoUrl}}" object-fit="fill" bindfullscreenchange="fullscreenchange"></video>
+            </view>
+  </view>
+  <view class="block" bindtap = "chooseVideo">
+    <label>上传视频</label>
+    <button class="add-video">+</button>
+  </view>
+  <!--
+  <view class="block contact">
+    <label>联系人<text style="color:red">*</text></label>
+    <input></input>
+    <label>联系方式<text style="color:red">*</text></label>
+    <input></input>
+  </view>
+  -->
+  <button id="submit" catchtap='submitt'>提交</button>
+</form>

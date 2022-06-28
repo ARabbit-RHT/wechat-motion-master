@@ -1,0 +1,31 @@
+<form>
+  <view class="block">
+      <label>动作名称：{{name}}</label>
+      <label>动作分类：{{category}}</label>
+    <label>动作记录</label>
+            <view class="video">
+                <video class="videoContent" show-center-play-btn="true" autoplay="false"
+                 src="{{videoUrl}}" object-fit="fill" bindfullscreenchange="fullscreenchange"></video>
+            </view>
+  </view>
+  <view class="block  ">
+  <label>动作变化</label>
+    <view class='container'>
+    <ch-canvas canvasId='line' id='line'></ch-canvas>
+    </view>
+    
+<!-- 出库类型下拉框 -->
+<label>肢体夹角选择</label>
+<select prop-array='{{select_options}}'  bind:select='select' />
+
+
+  </view>
+  <view class="block">
+    <label>达标占比</label>
+    <view class='container'>
+  <ch-canvas canvasId='rose' id='rose'></ch-canvas>
+</view>
+  </view>
+  <button id="back" catchtap='back'>返回</button>
+</form>
+
